@@ -1,0 +1,26 @@
+# Chrome Extension Build Files
+*.zip
+*.crx
+*.pem
+
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+*.log
+*.tmp
+store-assets/
+create_store_assets.py
+
+# Node modules (if you add build tools later)
+node_modules/
+package-lock.json
+

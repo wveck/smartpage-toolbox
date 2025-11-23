@@ -1,0 +1,10 @@
+/* File: popup.css
+ * Purpose: Popup specific layout adjustments, imports shared styles.
+ */
+@import url('./styles/common.css');
+
+body {
+  width: 420px;
+  height: 600px;
+}
+

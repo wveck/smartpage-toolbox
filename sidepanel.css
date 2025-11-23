@@ -1,0 +1,14 @@
+/* File: sidepanel.css
+ * Purpose: Side panel specific layout overrides for SmartPage Toolbox.
+ */
+@import url('./styles/common.css');
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.sp-shell {
+  min-height: 100vh;
+}
+

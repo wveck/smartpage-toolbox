@@ -1,0 +1,69 @@
+{
+  "manifest_version": 3,
+  "name": "SmartPage Toolbox",
+  "short_name": "SmartPage",
+  "description": "Offline productivity toolbox with screenshots, highlights, notes, clipboard history, and dark overlays.",
+  "version": "1.0.0",
+  "minimum_chrome_version": "116",
+  "icons": {
+    "16": "assets/icons/icon16.png",
+    "48": "assets/icons/icon48.png",
+    "128": "assets/icons/icon128.png"
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "tabs",
+    "clipboardWrite",
+    "contextMenus",
+    "identity",
+    "alarms"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "SmartPage Toolbox",
+    "default_icon": {
+      "16": "assets/icons/icon16.png",
+      "48": "assets/icons/icon48.png",
+      "128": "assets/icons/icon128.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "commands": {
+    "toggle-side-panel": {
+      "description": "Open SmartPage Toolbox side panel",
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y"
+      }
+    },
+    "quick-screenshot": {
+      "description": "Capture SmartPage screenshot",
+      "suggested_key": {
+        "default": "Ctrl+Shift+S"
+      }
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content/contentScript.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "offline_enabled": true
+}
+
